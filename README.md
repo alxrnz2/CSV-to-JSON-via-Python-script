@@ -1,14 +1,14 @@
-# Create JSONs from a CSV file containing traits
+# Create JSONs from a CSV file using a Python script
 
 ## Overview
 
-The `Compiler.py` python script converts the traits in `Roster.csv` row-by-row into a JSON file for each row.
+Our `Compiler.py` python script converts the traits in `Roster.csv` into a JSON file for each row.
 
 While this logic can be used for a number of applications, our example creates JSONs for an NFT collection called ParkPics. Find the full repo for ParkPics [here](https://github.com/alxrnz2/ERC1155-with-EIP2981-for-OpenSea), which covers metadata pinning/upload, smart contracts, deployment, verification, and OpenSea import.
 
 ## Steps to update `Compiler.py`
 
-First, adjust the image pin to reflect your images' CAR file. Learn more about CARs [in one of our other repos](https://github.com/alxrnz2/ERC1155-with-EIP2981-for-OpenSea#1-pinupload-token-metadata).
+First, adjust the image pin to reflect your images' CAR file. Learn more about CARs in our [ERC 1155 repo](https://github.com/alxrnz2/ERC1155-with-EIP2981-for-OpenSea#1-pinupload-token-metadata).
 
 ```
 archive = "ipfs://bafybeiatmiig6ylhha5p7o7bxvqutfitv6k2n5ghche4r22tgkmoz6gu5u/"
@@ -24,7 +24,7 @@ type = row[3]
 feature = row[4]
 ```
 
-Finally, update `NFTjson = ...` for the desired fields in your JSONs.
+Finally, update `NFTjson = ...` for the desired fields in your JSONs. Learn more from the [NFT School](http://nftschool.dev.ipns.localhost:8080/reference/metadata-schemas/) about token metadata standards.
 
 ## Create your JSONs
 
@@ -32,4 +32,4 @@ Run the `Compiler.py` script in your IDE/CLI of choice. If you're new to Python 
 
 ## Test the JSONs before upload
 
-Before uploading your JSONs, we recommend opening them in VS Code (or a similar IDE), right clicking anywhere in the file, and selecting `Format Document`. Then, the IDE should flag any formatting errors that you'd need to fix in your Python script.
+Before uploading your JSONs, we recommend opening a few in VS Code (or a similar IDE), right clicking anywhere in the JSON, and selecting `Format Document`. Then, the IDE should flag any formatting errors that you'd need to fix in your Python script.
