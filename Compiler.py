@@ -10,14 +10,14 @@ with open('Roster.csv') as csv_file:
     #Loops through CSV rows, each containing a single token's characteristics
     for row in csv_reader:
         
-        #Option if statement to process only certain tokens if desired
+        #Optional if statement to process only certain tokens if desired
         if line_count >= 0:
             line_count += 1
         
-            #IPFS CAR pin for token collection images
+            #IPFS CAR pin for token collection images (replace for your collection's images if building tokens)
             archive = "ipfs://bafybeiatmiig6ylhha5p7o7bxvqutfitv6k2n5ghche4r22tgkmoz6gu5u/"
 
-            #Create a variable for each token trait
+            #Create a variable for each token trait (by row)
             filename = row[0]
             name = row[1]
             park = row[2]
